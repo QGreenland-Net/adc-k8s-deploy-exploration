@@ -4,11 +4,13 @@ metadata:
   name: {{ .Release.Name }}-configmap
 data:
   myvalue: "Hello World"
-  drink: {{ .Values.favorite.drink | default "tea" | quote }}
-  {{- if eq .Values.favorite.drink "coffee" }}
+  {{- with .Values.favorite }}
+  drink: {{ .drink | default "tea" | quote }}
+  {{- if eq .drink "coffee" }}
   mug: "true"
   {{- end }}
-  food: {{ .Values.favorite.food | upper | quote }}
-  number: {{ .Values.favorite.number | quote }}
-  date: {{ now }}
+  food: {{ .food | upper | quote }}
+  number: {{ .number | quote }}
+  {{- end }}
   required_field: {{ required "A value is required!" .Values.required_field }}
+  date: {{ now }}
