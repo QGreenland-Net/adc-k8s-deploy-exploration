@@ -12,3 +12,8 @@ Good places to start:
 * [Chart template guide](https://helm.sh/docs/chart_template_guide/):
   information about the Helm templating system. E.g., how to add control flow,
   access vairables, loop over lists/mappings, etc.
+  
+Also to consider:
+
+* [kompose](https://kompose.io/user-guide/): takes docker compose configuration
+  and converts it into kubernetes yaml, helm, and other options. Why not use this? Helm feels very heavy-weight.
