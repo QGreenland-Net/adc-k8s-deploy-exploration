@@ -15,3 +15,7 @@ data:
   {{- end }}
   required_field: {{ required "A value is required!" .Values.required_field }}
   date: {{ now }}
+  toppings: |-
+    {{- range .Values.pizzaToppings }}
+    - {{ . | title | quote }}
+    {{- end }}

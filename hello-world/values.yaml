@@ -110,3 +110,9 @@ favorite:
   drink: "coffee"
   food: "pizza"
   number: 1
+
+pizzaToppings:
+  - mushrooms
+  - cheese
+  - peppers
+  - onions
