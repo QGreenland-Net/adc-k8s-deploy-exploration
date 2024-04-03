@@ -5,7 +5,9 @@ metadata:
 data:
   myvalue: "Hello World"
   drink: {{ .Values.favorite.drink | default "tea" | quote }}
-  {{ if eq .Values.favorite.drink "coffee" }}mug: "true"{{ end }}
+  {{- if eq .Values.favorite.drink "coffee" }}
+  mug: "true"
+  {{- end }}
   food: {{ .Values.favorite.food | upper | quote }}
   number: {{ .Values.favorite.number | quote }}
   date: {{ now }}
