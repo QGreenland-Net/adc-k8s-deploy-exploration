@@ -4,6 +4,7 @@ metadata:
   name: {{ .Release.Name }}-configmap
 data:
   myvalue: "Hello World"
+  {{- $relname := .Release.Name -}}
   {{- with .Values.favorite }}
   drink: {{ .drink | default "tea" | quote }}
   {{- if eq .drink "coffee" }}
@@ -12,6 +13,7 @@ data:
   food: {{ .food | upper | quote }}
   number: {{ .number | quote }}
   release: {{ $.Release.Name }}
+  release_using_var: {{ $relname }}
   {{- end }}
   required_field: {{ required "A value is required!" .Values.required_field }}
   date: {{ now }}
