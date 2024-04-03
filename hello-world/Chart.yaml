@@ -1,6 +1,7 @@
 apiVersion: v2
 name: hello-world
 description: A Helm chart for Kubernetes
+icon: "https://qgreenland.org/sites/default/files/qgreenland-logo-60.png"
 
 # A chart can be either an 'application' or a 'library' chart.
 #
