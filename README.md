@@ -17,3 +17,5 @@ Also to consider:
 
 * [kompose](https://kompose.io/user-guide/): takes docker compose configuration
   and converts it into kubernetes yaml, helm, and other options. Why not use this? Helm feels very heavy-weight.
+* [skaffold](https://skaffold.dev/): Skaffold handles the workflow for building,
+  pushing and deploying your application
