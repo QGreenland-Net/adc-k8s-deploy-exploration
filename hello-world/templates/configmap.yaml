@@ -11,6 +11,7 @@ data:
   {{- end }}
   food: {{ .food | upper | quote }}
   number: {{ .number | quote }}
+  release: {{ $.Release.Name }}
   {{- end }}
   required_field: {{ required "A value is required!" .Values.required_field }}
   date: {{ now }}
