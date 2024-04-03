@@ -8,3 +8,4 @@ data:
   food: {{ .Values.favorite.food | upper | quote }}
   number: {{ .Values.favorite.number | quote }}
   date: {{ now }}
+  required_field: {{ required "A value is required!" .Values.required_field }}
