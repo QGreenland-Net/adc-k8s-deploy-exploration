@@ -1,7 +1,15 @@
 # ADC k8s Deployment Exploration
 
-This repository contains code & configuration for a test deployment to ADC's
-kubernetes test cluster.
+This repository has been archived.
+
+This repository was created to explore the use of helm for a test deployment to
+ADC's kubernetes test cluster.
+
+Refer to the [ogdc-helm](https://github.com/qgreenland-net/ogdc-helm) repository
+for the latest developments on helm configurations for the OGDC stack.
+
+
+## Using helm
 
 Good places to start:
 
@@ -13,7 +21,8 @@ Good places to start:
   information about the Helm templating system. E.g., how to add control flow,
   access vairables, loop over lists/mappings, etc.
   
-Also to consider:
+
+## Other options to consider
 
 * [kompose](https://kompose.io/user-guide/): takes docker compose configuration
   and converts it into kubernetes yaml, helm, and other options. Why not use this? Helm feels very heavy-weight.
